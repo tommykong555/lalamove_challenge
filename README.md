@@ -4,11 +4,11 @@ Description:
 
 Instruction:
 
-1. Execute setup.sh
+1. Execute setup.sh (type 'yes' for every questions)
 
 	$ chmod u+x setup.sh
 
-	$ sh setup.sh
+	$ sh setup.sh 
 
 2. Add current directory to PATH
 
