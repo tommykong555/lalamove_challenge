@@ -1,0 +1,29 @@
+#!/bin/sh
+#!/bin/sh
+if [ "$1" = "create_order" ]
+then
+        if [ -z "$2" ]
+        then
+                echo "origin and destination required"
+        elif [ -z "$3" ]
+        then
+                echo "destination required"
+        else
+        java -classpath ".:sqlite-jdbc-3.36.0.1.jar" OrderManager create_order "$2" "$3"
+        fi
+elif [ "$1" = "list_orders" ]
+then
+        java -classpath ".:sqlite-jdbc-3.36.0.1.jar" OrderManager list_orders
+elif [ "$1" = "take_order" ]
+then
+        if [ -z "$2" ]
+        then
+                echo "ID required"
+        else
+                java -classpath ".:sqlite-jdbc-3.36.0.1.jar" OrderManager take_order "$2"
+        fi
+else
+        echo "Invalid function name"
+
+fi
+
