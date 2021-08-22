@@ -9,7 +9,7 @@ public class OrderManager {
                 Class.forName("org.sqlite.JDBC");
                 c = DriverManager.getConnection("jdbc:sqlite:orders.db");             // create a connection to the database
 
-                System.out.println("Opened database successfully");
+               // System.out.println("Opened database successfully");
 
                 stmt = c.createStatement();
                 String sql = "CREATE TABLE IF NOT EXISTS ORDERLIST " +          // SQL statement for creating a new table
@@ -37,7 +37,7 @@ public class OrderManager {
                 System.err.println( e.getClass().getName() + ": " + e.getMessage() );
                 System.exit(0);
             }
-            System.out.println("Table created successfully");
+            //System.out.println("Table created successfully");
             //list_orders();
 
         switch(args.length){
